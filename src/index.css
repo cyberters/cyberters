@@ -1,13 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: white;
+    scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'PlayfairDisplay-italic';
+  src: url('./assets/fonts/PlayfairDisplay-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans-SemiBold';
+  src: url('./assets/fonts/PlusJakartaSans-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans-Regular';
+  src: url('./assets/fonts/PlusJakartaSans-Regular.ttf');
+}
+
+/* h1, h2, h3, .glitch {
+  font-family: 'PlayfairDisplay-italic';
+} */
+
+h1, h2, h3, h4, h5, h6, a, .glitch {
+  font-family: 'PlusJakartaSans-SemiBold';
+}
+
+span, div, small {
+  font-family: 'PlusJakartaSans-Regular';
+}
+
+
+@keyframes glitch {
+  0% {
+      clip: rect(26px, 9999px, 55px, 0);
+      transform: skew(0.3deg);
+  }
+  5% {
+      clip: rect(88px, 9999px, 44px, 0);
+      transform: skew(0.2deg);
+  }
+  10% {
+      clip: rect(19px, 9999px, 88px, 0);
+      transform: skew(0.1deg);
+  }
+  15% {
+      clip: rect(62px, 9999px, 78px, 0);
+      transform: skew(0.3deg);
+  }
+  20% {
+      clip: rect(30px, 9999px, 46px, 0);
+      transform: skew(0.4deg);
+  }
+  25% {
+      clip: rect(98px, 9999px, 54px, 0);
+      transform: skew(0.2deg);
+  }
+  30% {
+      clip: rect(29px, 9999px, 83px, 0);
+      transform: skew(0.1deg);
+  }
+  35% {
+      clip: rect(46px, 9999px, 76px, 0);
+      transform: skew(0.3deg);
+  }
+  40% {
+      clip: rect(36px, 9999px, 56px, 0);
+      transform: skew(0.2deg);
+  }
+  45% {
+      clip: rect(56px, 9999px, 92px, 0);
+      transform: skew(0.1deg);
+  }
+  50% {
+      clip: rect(98px, 9999px, 58px, 0);
+      transform: skew(0.3deg);
+  }
+  55% {
+      clip: rect(24px, 9999px, 96px, 0);
+      transform: skew(0.2deg);
+  }
+  60% {
+      clip: rect(82px, 9999px, 44px, 0);
+      transform: skew(0.1deg);
+  }
+  65% {
+      clip: rect(36px, 9999px, 92px, 0);
+      transform: skew(0.3deg);
+  }
+  70% {
+      clip: rect(98px, 9999px, 46px, 0);
+      transform: skew(0.2deg);
+  }
+  75% {
+      clip: rect(29px, 9999px, 96px, 0);
+      transform: skew(0.1deg);
+  }
+  80% {
+      clip: rect(42px, 9999px, 56px, 0);
+      transform: skew(0.3deg);
+  }
+  85% {
+      clip: rect(86px, 9999px, 88px, 0);
+      transform: skew(0.2deg);
+  }
+  90% {
+      clip: rect(56px, 9999px, 96px, 0);
+      transform: skew(0.1deg);
+  }
+  95% {
+      clip: rect(98px, 9999px, 54px, 0);
+      transform: skew(0.3deg);
+  }
+  100% {
+      clip: rect(36px, 9999px, 44px, 0);
+      transform: skew(0.2deg);
+  }
+}
+
+.glitch-text::before {
+  animation: glitch 2s infinite ease-in-out alternate-reverse;
+}
+
+.glitch-text::after {
+  animation: glitch 2s infinite ease-in-out;
 }
