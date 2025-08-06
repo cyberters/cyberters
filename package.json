@@ -1,7 +1,7 @@
 {
   "name": "page",
   "version": "0.1.0",
-  "homepage": "https://cyberters.github.io/cyberters",
+  "homepage": "https://cyberters.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
