@@ -11,27 +11,27 @@ export default function Services() {
     const services = [
         { 
             title: "UX Design", 
-            xOffset: "translate-x-0", 
+            xOffset: "lg:translate-x-0", 
             desc: "We design user experiences based on research, usability principles, and data-driven insights to ensure intuitive, efficient, and enjoyable interactions across devices." 
         },
         { 
             title: "UI Design", 
-            xOffset: "translate-x-80", 
+            xOffset: "lg:translate-x-80", 
             desc: "We create modern, responsive, and accessible interfaces that enhance user engagement and align with brand identity, ensuring seamless interaction on any platform." 
         },
         { 
             title: "Web Development", 
-            xOffset: "translate-x-60", 
+            xOffset: ";g:translate-x-60", 
             desc: "We build scalable, high-performance websites and applications using modern tech stacks: JavaScript (React, Node.js), Python, PHP, SQL, and WordPress." 
         },
         { 
             title: "Logo Design", 
-            xOffset: "translate-x-10", 
+            xOffset: "lg:translate-x-10", 
             desc: "We craft distinctive, versatile logos with a strong visual identity, optimized for digital and print, ensuring lasting brand recognition." 
         },
         { 
             title: "Intelligent Digital Products", 
-            xOffset: "translate-x-48", 
+            xOffset: "lg:translate-x-48", 
             desc: "We develop AI-powered solutions, smart applications, and automation tools that streamline workflows, enhance decision-making, and drive innovation." 
         }
     ];
@@ -39,9 +39,9 @@ export default function Services() {
     const selectedServiceObject = services.find(service => service.title === selectedService);
 
     return (
-        <div className="grid grid-cols-8 gap-8 mx-auto w-full py-16">
-            <div className="flex flex-col space-y-10 col-span-3">
-                <GlitchText text={`we're thinkin' 'bout TECH...`} size={`text-8xl`} />
+        <div className="grid grid-cols-8 gap-8 mx-auto w-full py-4 lg:py-16">
+            <div className="flex flex-col space-y-10 col-span-8 lg:col-span-3">
+                <GlitchText text={`we're thinkin' 'bout TECH...`} size={`text-4xl md:text-6xl lg:text-8xl`} />
                 <p className="text-md text-white">
                     ...every day! Welcome to Cyberter's - small design studio of new technologies lovers. We can offer full support in the design of digital services as well as traditional advertising materials.
                 </p>
@@ -51,7 +51,7 @@ export default function Services() {
                 </div>
                 <ServiceItem title={selectedService} desc={selectedServiceObject?.desc} page={selectedServiceObject?.page}/>
             </div>
-            <div className="col-span-5 flex relative">
+            <div className="col-span-8 lg:col-span-5 flex relative">
                 <div className="absolute left-48 opacity-60">
                     <img src={image02} alt="" style={{
                         height: `25vw`,
@@ -71,7 +71,7 @@ export default function Services() {
                         filter: `invert(1)`
                     }}/>
                 </div>
-                <div className="flex flex-col space-y-8 ms-24">
+                <div className="flex flex-col space-y-8 lg:ms-24">
                     {services.map((service, index) => (
                         <div
                             key={index}

@@ -8,7 +8,7 @@ import NotFoundPage from "./routes/404-page";
 const App = () => {
   const router_page = createBrowserRouter([
     { path: "/", element: <Hello /> },
-    { path: "/*", element: <NotFoundPage /> }
+    { path: "/*", element: <Hello /> }
   ]);
 
   return <RouterProvider router={router_page} />;

@@ -2,8 +2,8 @@ import logo from '../assets/svg/logo.svg'
 
 export default function Navigation() {
     return (
-    <header class="bg-black text-white">
-        <div class="flex justify-between items-center">
+    <header class="bg-black text-white pt-12 md:pt-0">
+        <div class="flex flex-col space-y-4 md:flex-row justify-between items-center">
             <img src={logo} alt="" srcset="" className='h-12'/>
             <nav>
                 <ul class="flex space-x-12">
